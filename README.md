@@ -22,7 +22,7 @@ export default class Wrapper extends BaseRouteWrapper {
 - Page cần override hàm render là `renderBody`
 - Override hàm `setUnderHeader` nếu cần có phần nội dung bên dưới header, xem ví dụ bên dưới
 ```jsx
-class ActivityPage extends PageLayout {
+class Page extends PageLayout {
     constructor(props) {
         super(props);
         this.pageTitle = "Hoạt động";
