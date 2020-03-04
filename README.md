@@ -32,8 +32,8 @@ export default class Wrapper extends BaseRouteWrapper {
 - Ngoài ra còn có một số hàm khác, về cơ bản cơ chế giống set page title ở trên
 
 ##### 3. Page component
-- Page cần kế thừa `PageLayout` override hàm render là `renderBody`
-- Override hàm `setUnderHeader` (`func` return `node`) nếu cần có phần nội dung bên dưới header, xem ví dụ bên dưới
+- Page cần kế thừa `PageLayout` override hàm render là `renderBody` 
+- Ngoài ra có thể override hàm `renderUnderHeader` để render phần có nội dung bên dưới header (background xanh), xem VD
 ```jsx
 class Page extends PageLayout {
     constructor(props) {
@@ -41,7 +41,7 @@ class Page extends PageLayout {
         this.pageTitle = "Hoạt động";
         this.tabbarValue = Enum.TabType.Activity;
     }
-    setUnderHeader(){
+    renderUnderHeader(){
         return (
             <div style={{padding: '1rem'}}>
                 UNDER HEADER
