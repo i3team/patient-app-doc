@@ -33,7 +33,7 @@ export default class Wrapper extends BaseRouteWrapper {
 
 ##### 3. Page component
 - Page cần kế thừa `PageLayout` override hàm render là `renderBody`
-- Override hàm `setUnderHeader` nếu cần có phần nội dung bên dưới header, xem ví dụ bên dưới
+- Override hàm `setUnderHeader` (`func` return `node`) nếu cần có phần nội dung bên dưới header, xem ví dụ bên dưới
 ```jsx
 class Page extends PageLayout {
     constructor(props) {
