@@ -99,5 +99,18 @@ export default class BenhAnModalCreator extends BaseAction {
 />
 ```
 
+##### 5. open Modal
+- Các component body của open modal đều đã được tự động truyền 1 prop là `closeModal` là 1 function có chức năng tắt chính modal đó (không cần modal index như trước đây)
+- Chỉ áp dụng cho cách này
+- Chi tiết xem ModalWrapper.jsx
+```jsx
+    this.openModal(() => ({
+        body: <TestComponent 
+            data={1}
+        />
+    }))
+```
+- Khi open modal như trên, TestComponent sẽ nhận được props là `closeModal`, gọi `this.props.closeModal()` để tắt modal 
+
 
 
