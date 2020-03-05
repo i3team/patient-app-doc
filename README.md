@@ -61,11 +61,11 @@ class Page extends PageLayout {
 - Override `this.tabbarValue` (`Enum.TabType`)  để set giá trị của tabbar khi vào trang đó
 - Override `this.showTabbar`(`boolean`) để App biết Page đó có sử dụng Tabbar hay không
 
-##### 4. BaseCreator
+##### 4. BaseAction
 - Việc thực hiện một hành động như `openModal`, hoặc get dữ liệu, ... nên được implement ở 1 chỗ, việc tái sử dụng sẽ hiệu quả hơn
 Ví dụ: open một modal bệnh án thì mỗi trang sẽ có cách hiển thị 'nút open bệnh án' khác nhau (button hoặc thẻ a), nhưng việc gọi `this.openModal` nên được tập trung 1 chỗ
 ```jsx
-export default class BaseCreator extends BaseConsumer {
+export default class BaseCreator extends BaseAction {
     static propTypes = {
         renderContent: PropTypes.func.isRequired
     }
