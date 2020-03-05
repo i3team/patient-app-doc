@@ -65,7 +65,7 @@ class Page extends PageLayout {
 - Việc thực hiện một hành động như `openModal`, hoặc get dữ liệu, ... nên được implement ở 1 chỗ, việc tái sử dụng sẽ hiệu quả hơn
 Ví dụ: open một modal bệnh án thì mỗi trang sẽ có cách hiển thị 'nút open bệnh án' khác nhau (button hoặc thẻ a), nhưng việc gọi `this.openModal` nên được tập trung 1 chỗ
 ```jsx
-export default class BaseCreator extends BaseAction {
+export default class BaseAction extends BaseConsumer {
     static propTypes = {
         renderContent: PropTypes.func.isRequired
     }
@@ -80,7 +80,7 @@ export default class BaseCreator extends BaseAction {
 ```
 - Giả sử cần một component để mở bệnh án, implement như sau \
 ```jsx
-export default class BenhAnModalCreator extends BaseCreator {
+export default class BenhAnModalCreator extends BaseAction {
     onClick() {
         this.openModal(bla bla bla);
     }
