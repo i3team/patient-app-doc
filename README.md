@@ -67,12 +67,20 @@ class Page extends PageLayout {
 - Các component body của open modal đều đã được tự động truyền 1 prop là `closeModal` là 1 function có chức năng tắt chính modal đó (không cần modal index như trước đây)
 - Chỉ áp dụng cho cách này
 - Chi tiết xem ModalWrapper.jsx
+- Parameter: 
+    - modal function (như cũ)
+    - modal type: `ModalType`:
+        - `ModalType.Full`: modal full màn hình
+        - `ModalType.Popup`: popup nhỏ
 ```jsx
-    this.openModal(() => ({
+    import {ModalType} from '~/src/general/enum';
+    
+    let modalFunc = () => ({
         body: <TestComponent 
             data={1}
         />
-    }))
+    });
+    this.openModal(modalFunc, ModalType.Full)
 ```
 - Khi open modal như trên, TestComponent sẽ nhận được props là `closeModal`, gọi `this.props.closeModal()` để tắt modal 
 
