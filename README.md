@@ -35,6 +35,8 @@ export default class Wrapper extends BaseRouteWrapper {
 - Page cần kế thừa `PageLayout` override hàm render là `renderBody` 
 - Lưu ý: Page kế thừa `PageLayout` không được ghi đè `componentDidMount` mà sử dụng `layoutDidMount`
 - Ngoài ra có thể override hàm `renderUnderHeader` để render phần có nội dung bên dưới header (background xanh), xem VD
+- Nếu không muốn sử dụng padding default của layout thì ghi đè `this.hasDefaultPadding = false`
+- Page kế thừa `PageLayout` có một property là `this.defaultPadding` (không được ghi đè) dùng trong trường hợp muốn sử dụng padding giống của layout một cách chủ động 
 ```jsx
 class Page extends PageLayout {
     constructor(props) {
