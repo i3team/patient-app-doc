@@ -74,6 +74,7 @@ class Page extends PageLayout {
     - modal type: `ModalType`:
         - `ModalType.Full`: modal full màn hình
         - `ModalType.Popup`: popup nhỏ
+        - `ModalType.Blank`: pop trắng có nút X ở góc
     - hasDefaultPadding: `boolean`, mặc định là `true`.
 - Các component body có nhận được prop là `defaultPadding`, có thể dùng để padding bên trong (chẳng hạn nếu không dùng default padding mà muốn customize lại)
 ```jsx
